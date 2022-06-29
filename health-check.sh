@@ -1,6 +1,3 @@
-# In the original repository we'll just print the result of status checks,
-# without committing. This avoids generating several commits that would make
-# later upstream merges messy for anyone who forked us.
 commit=true
 origin=$(git remote get-url origin)
 
@@ -54,7 +51,6 @@ done
 
 if [[ $commit == true ]]
 then
-  # Let's make Vijaye the most productive person on GitHub.
   git config --global user.name 'CyberNobie'
   git config --global user.email 'jkarts91@gmail.com'
   git add -A --force logs/
